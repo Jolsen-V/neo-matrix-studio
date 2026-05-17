@@ -13,13 +13,14 @@ investment_time = int(input("How many years do you want to invest?:"))
 investment_months = investment_time * 12
 
 # calculate ROI: Basic , Annualized and Monthly
+gain_basic = revenue - investment
 roi = ((revenue - investment) / investment) * 100
 annualized_roi = ((revenue / investment) ** (1/ investment_time) - 1) * 100
-monthly_roi = (revenue / (investment * investment_months)) * 100
+monthly_roi = (gain_basic / (investment * investment_months)) * 100
 
-gain_basic = revenue - investment
 gain_annualized = investment * (annualized_roi / 100) * investment_time
 gain_monthly = investment * (monthly_roi / 100) * investment_months
+
 
 #* Show results of gain and roi
 print(" ")
