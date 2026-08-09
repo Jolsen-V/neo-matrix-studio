@@ -10,8 +10,14 @@ print()
 
 # Personal data
 print("--------- PERSONAL DATA ---------")
-name = input("what is your name?: ")
-age = int(input("What is your age?: "))
+name = input("What is your name?: ")
+age = input("What is your age?: ")
+try:
+    age = int(age)
+except ValueError:
+    print("Invalid age. Please enter a valid integer.")
+    # Handle the error here, such as asking for the age again
+
 dni = input("What is your DNI?: ")
 marital_status = input("What is your marital status? (single/married): ")
 email = input("What is your email?: ")
